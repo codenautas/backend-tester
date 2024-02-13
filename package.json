@@ -1,0 +1,83 @@
+{
+  "name": "backend-tester",
+  "description": "Test suite for backend-plus",
+  "version": "0.1.0",
+  "author": "Codenautas <codenautas@googlegroups.com>",
+  "license": "MIT",
+  "files": [
+    "lib"
+  ],
+  "repository": "codenautas/backend-tester",
+  "contributors": [
+    {
+      "name": "Emilio Platzer",
+      "email": "emilioplatzer@gmail.com"
+    }
+  ],
+  "dependencies": {
+    "backend-plus": "^2.0.0-rc.4",
+    "best-globals": "^1.1.2",
+    "cast-error": "^0.1.0",
+    "discrepances": "^0.2.8",
+    "form-data": "^4.0.0",
+    "guarantee-type": "^0.1.2",
+    "json4all": "^1.2.1",
+    "like-ar": "^0.3.9",
+    "node-fetch": "^3.3.2"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.21",
+    "@types/express-session": "^1.17.10",
+    "@types/js-yaml": "^4.0.9",
+    "@types/mocha": "^10.0.6",
+    "@types/node": "^20.11.17",
+    "@types/pg": "^8.11.0",
+    "@types/pg-copy-streams": "^1.2.5",
+    "@types/send": "~0.17.4",
+    "@typescript-eslint/eslint-plugin": "~7.0.1",
+    "@typescript-eslint/parser": "~7.0.1",
+    "eslint": "~8.56.0",
+    "express": "^4.18.2",
+    "express-session": "^1.18.0",
+    "mocha": "^10.3.0",
+    "nyc": "^15.1.0",
+    "typescript": "~5.3.3"
+  },
+  "main": "lib/backend-tester.js",
+  "types": "lib/backend-tester.d.ts",
+  "engines": {
+    "node": ">= 18"
+  },
+  "scripts": {
+    "prepare": "eslint && tsc"
+  },
+  "nyc": {
+    "extension": [
+      ".ts",
+      ".tsx"
+    ],
+    "exclude": [
+      "**/*.d.ts",
+      "coverage",
+      "example",
+      "test"
+    ],
+    "include": [
+      "**"
+    ],
+    "reporter": [
+      "html",
+      "lcov",
+      "text-summary"
+    ],
+    "all": true
+  },
+  "qa-control": {
+    "package-version": "0.3.0",
+    "run-in": "server",
+    "test-appveyor": true,
+    "type": "lib",
+    "stage": "designing",
+    "coverage": 100
+  }
+}

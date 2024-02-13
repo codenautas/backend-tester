@@ -1,0 +1,13 @@
+{
+    "compilerOptions": {
+        "outDir": "../lib",
+        "module": "none",
+        "target": "ESNEXT",
+        "lib":["ES2022"],
+        "baseUrl": ""
+    },
+    "include":[
+        "."
+    ], 
+    "extends": "../tsconfig.json"
+}

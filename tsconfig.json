@@ -1,0 +1,29 @@
+{
+    "compilerOptions": {
+        "declaration": true,
+        "outDir": "lib",
+        "module": "none",
+        "target": "esnext",
+        "sourceMap": true,
+        "moduleResolution": "node",
+        "lib": [ "es2022" ],
+        "typeRoots" : ["node_modules/@types", "node_modules/types.d.ts/modules"],
+        "strict": true,
+        "noImplicitAny": true,
+        "baseUrl": ".",
+        "plugins": [
+            { "name": "typescript-tslint-plugin" }
+        ],
+        "noUnusedLocals": true,
+        "noUnusedParameters": true,
+        "noImplicitReturns": true, /* Report error when not all code paths in function return a value. */
+        "noFallthroughCasesInSwitch": true
+        // "strictBindCallApply": true,
+        // "strictFunctionTypes": true,
+        // "strictNullChecks": true,
+        // "strictPropertyInitialization": true
+    },
+    "include":[
+        "src/*.ts"
+    ]
+}

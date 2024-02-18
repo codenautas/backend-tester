@@ -1,7 +1,7 @@
 {
   "name": "backend-tester",
   "description": "Test suite for backend-plus",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "author": "Codenautas <codenautas@googlegroups.com>",
   "license": "MIT",
   "files": [
@@ -14,10 +14,10 @@
       "email": "emilioplatzer@gmail.com"
     }
   ],
-  "dependencies": {
-    "backend-plus": "^2.0.0-rc.4",
+  "dependenci22es": {
+    "backend-plus": "^2.0.0-rc.5",
     "best-globals": "^1.1.2",
-    "cast-error": "^0.1.0",
+    "cast-error": "^0.1.1",
     "discrepances": "^0.2.8",
     "form-data": "^4.0.0",
     "guarantee-type": "^0.1.2",
@@ -30,7 +30,7 @@
     "@types/express-session": "^1.17.10",
     "@types/js-yaml": "^4.0.9",
     "@types/mocha": "^10.0.6",
-    "@types/node": "^20.11.17",
+    "@types/node": "^20.11.19",
     "@types/pg": "^8.11.0",
     "@types/pg-copy-streams": "^1.2.5",
     "@types/send": "~0.17.4",

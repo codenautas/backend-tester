@@ -29,7 +29,7 @@ export declare class Session<TApp extends AppBackend> {
         method: 'get';
         noParseResult: true;
     }): Promise<string>;
-    getResult(request: Awaited<ReturnType<typeof fetch>>): Promise<unknown>;
+    getResult(request: Awaited<ReturnType<typeof fetch>>): Promise<any>;
     login(params: {
         username: string;
         password: string;

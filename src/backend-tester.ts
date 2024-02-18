@@ -14,7 +14,6 @@ import { expected } from "cast-error";
 
 import { promises as fs } from 'fs';
 
-import { unexpected } from 'cast-error';
 import likeAr = require('like-ar');
 
 const MODE = 'api';
@@ -92,9 +91,8 @@ export class Session<TApp extends AppBackend>{
                 return await this.getResult(request);
             }
         } catch (err) {
-            const error = unexpected(err);
-            console.log(error);
-            if (error.cause) throw error;
+            const error = expected(err);
+            if (error.cause) throw error.cause;
             throw error;
         }
     }
